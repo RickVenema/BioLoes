@@ -13,8 +13,8 @@ To create a BioLoesSEQ object the following parameters can be given to the objec
 * type_DNA: The type of the DNA (coding or template)
 
 ### Functions of the BioLoesSEQ object
-* [\_\_init\_\_](\_\_init\_\_)
-* [reverse_sequence](reverse_sequence)
+* [\_\_init\_\_](#\_\_init\_\_)
+* [reverse_sequence](#reverse_sequence)
 
 
 ### Function documentation
