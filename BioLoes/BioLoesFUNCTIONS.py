@@ -37,3 +37,8 @@ def transcript(DNA):
 def translate(RNA):
     for i in [ RNA[i:i+3] for i in range(0, len(RNA)) ]:
         print(i)
+
+
+def create_primer(DNA, temp_or_coding):
+    if temp_or_coding == "Template":
+        print(DNA, temp_or_coding)
