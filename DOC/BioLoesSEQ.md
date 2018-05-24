@@ -10,7 +10,7 @@ NewBioLoesObject = BioLoesSEQ(seq, type_DNA)
 
 To create a BioLoesSEQ object the following parameters can be given to the object
 * seq: The sequence of the DNA
-* type_DNA: The type of the DNA (coding or template)
+* type_DNA: The type of the DNA (coding or template). This argument is optional
 
 ### Functions of the BioLoesSEQ object
 * [\_\_init\_\_](#\_\_init\_\_)

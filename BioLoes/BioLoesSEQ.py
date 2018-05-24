@@ -1,5 +1,5 @@
 class BioLoesSEQ:
-    def __init__(self, sequence, type_DNA):
+    def __init__(self, sequence, type_DNA=""):
         self.sequence = sequence.upper()
         self.type_DNA = type_DNA
 
