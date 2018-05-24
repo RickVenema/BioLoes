@@ -4,7 +4,7 @@ class BioLoesSEQ:
         self.type_DNA = type_DNA
 
     def __str__(self):
-        return "SEQ object of type %s" % self.type_DNA
+        return "SEQ object with sequence %s" % self.sequence
 
     def __len__(self):
         return len(self.sequence)

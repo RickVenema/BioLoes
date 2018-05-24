@@ -4,13 +4,13 @@
 # import BioLoes.BioLoesFASTA as BioLoes
 # from BioLoes import SortingAlgortihms
 # import BioLoes.BioLoesSEQ as SeqObj
-import BioLoes.BioLoesFUNCTIONS as Biofuncs
-import BioLoes.BioLoesBLAST as BLAST
+import BioLoes.BioLoes.BioLoesFUNCTIONS as Biofuncs
+# import BioLoes.BioLoes.BioLoesBLAST as BLAST
 
 #############
 # Test Code #
 #############
-BLAST.BLASTn(81223361)
+# BLAST.BLASTn(81223361)
 
 #Biofuncs.translate("ATCTGACTATTCGATGCATGCAGCAGCAGACGCAGCATAGCGCATCGATCGA")
 #print(Biofuncs.find_ORFs("CATGAAAATGAAATAA"))

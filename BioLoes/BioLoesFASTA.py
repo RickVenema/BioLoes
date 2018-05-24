@@ -1,6 +1,3 @@
-import BioLoes.process_fasta as process_fasta
-
-
 class BioLoesFASTA:
     def __init__(self, file):
         self.object = "BioLoes"
@@ -13,7 +10,13 @@ class BioLoesFASTA:
             return f.read()
 
     def process_fasta(self):
-        return process_fasta.process_fasta(self.fasta_data)
-
+        splitted_fasta = self.fasta_data.split(">")
+        all_fastas = []
+        for i in splitted_fasta:
+            if i:
+                tmp = i.split("\n")
+                tmper = Fasta_object.FastaObject(tmp[0], ''.join(tmp[1:len(tmp)]), len(''.join(tmp[1:len(tmp)])))
+                all_fastas.append(tmper)
+        return all_fastas
 
 

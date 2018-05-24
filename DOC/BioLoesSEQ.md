@@ -5,19 +5,38 @@ To create a BioLoesSEQ object, the file of the module must be imported
 ```python
 from BioLoes import BioLoesSEQ
 
-NewBioLoesObject = BioLoesSEQ(seq, type_DNA)
+NewBioLoesObject = BioLoesSEQ(seq, ...)
 ```
 
 To create a BioLoesSEQ object the following parameters can be given to the object
+**Required arguments**
 * seq: The sequence of the DNA
-* type_DNA: The type of the DNA (coding or template). This argument is optional
 
-### Functions of the BioLoesSEQ object
+ **Optional arguments**
+* type_DNA: The type of the DNA (coding or template)
+
+
+
+### Representation
+#### len()
+To get he length of the sequence of the SEQ object. To use this len() function to get the 
+length the following code needs to be implemented in your own code:
+```python
+lengthOfSeq = len(BioLoesSEQ_object)
+```
+#### str()
+To print the object the str() function can be called via the str() function. 
+```python
+print(str(BioLoesSEQ_object))
+```
+
+### **Function documentation**
+
+### Contents
 * [\_\_init\_\_](#\_\_init\_\_)
 * [reverse_sequence](#reverse_sequence)
-
-
-### Function documentation
+* [upper()](#upper())
+* [lower()](#lower())
 
 #### \_\_init\_\_
 This is the constructor function. When creating the BioLoesSEQ object this function is
@@ -31,4 +50,20 @@ For example:
 ```python
 reversedSequence = NewBioLoesSEQObject.reverse_sequence()
 ```
+
+#### upper()
+This function is used to get the upper case sequence. The function will return 
+the sequence only
+
+```python
+SeqUpper = BioLoesSEQObject.upper()
+```
+
+#### lower()
+This function is used to get the lower case sequence. The function will retunr the 
+sequence only
+
+```python
+SeqLower = BioLoesSEQObject.lower()
+``` 
 
