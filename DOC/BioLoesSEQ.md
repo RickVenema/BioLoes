@@ -1,5 +1,14 @@
 ## BioLoesSEQ
 
+### Contents
+* [How to create a BioLoesSEQ object](#How-to-create-a-BioloesSEQ-object)
+* [Representation](#Representation)
+* [Function Documentation](#function-documentation)
+  * [\_\_init\_\_](#\_\_init\_\_)
+  * [reverse_sequence](#reverse_sequence)
+  * [upper()](#upper())
+  * [lower()](#lower())
+
 ### How to create a BioloesSEQ object
 To create a BioLoesSEQ object, the file of the module must be imported
 ```python
@@ -15,8 +24,6 @@ To create a BioLoesSEQ object the following parameters can be given to the objec
  **Optional arguments**
 * type_DNA: The type of the DNA (coding or template)
 
-
-
 ### Representation
 #### len()
 To get he length of the sequence of the SEQ object. To use this len() function to get the 
@@ -30,13 +37,8 @@ To print the object the str() function can be called via the str() function.
 print(str(BioLoesSEQ_object))
 ```
 
-### **Function documentation**
+### Function documentation
 
-### Contents
-* [\_\_init\_\_](#\_\_init\_\_)
-* [reverse_sequence](#reverse_sequence)
-* [upper()](#upper())
-* [lower()](#lower())
 
 #### \_\_init\_\_
 This is the constructor function. When creating the BioLoesSEQ object this function is
