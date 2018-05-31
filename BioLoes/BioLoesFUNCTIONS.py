@@ -50,7 +50,8 @@ def create_other_side_DNA(DNA):
 
 def create_other_side_RNA(RNA):
     RNA = create_other_side_DNA(RNA)
-    RNA.replace("T", "U")
+    RNA = RNA.replace("T", "U")
+    return RNA
 
 
 def translate_orf(orf):
@@ -62,10 +63,14 @@ def translate_orf(orf):
 
 
 def create_primer(DNA, temp_or_coding="Coding", len_primer=6):
+    """
+    This function will always return the DNA in the 5' to 3'
+    """
     if temp_or_coding == "Template":
-        print(DNA, temp_or_coding)
-
+        tmp = DNA[0:len_primer]
+        tmp = create_other_side_DNA(tmp)
+        return tmp
     elif temp_or_coding == "Coding":
-        print(DNA, temp_or_coding)
-        for base in [DNA[i] for i in range(len_primer)]:
-            print(base)
+        tmp = DNA[0:len_primer]
+        tmp = create_other_side_DNA(tmp)
+        return tmp[::-1]
