@@ -6,8 +6,10 @@
 This is the first version of BioLoes. The things that are added, are the first things
 to be added to BioLoes.
   
-This contains the following items:
+This release contains the following items:
 * BioLoesFUNCTIONS
 * BioLoesBLAST
 * BioLoesSEQ
-* BioLoesFASTA]
+* BioLoesFASTA
+
+Documentation is also added for the functions.

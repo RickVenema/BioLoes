@@ -34,11 +34,38 @@ def transcript(DNA):
     DNA.replace('T', 'U')
 
 
-def translate(RNA):
-    for i in [ RNA[i:i+3] for i in range(0, len(RNA)) ]:
-        print(i)
+def create_other_side_DNA(DNA):
+    other_side = ""
+    for base in DNA:
+        if base == "A":
+            other_side += "T"
+        elif base == "T":
+            other_side += "A"
+        elif base == "G":
+            other_side += "C"
+        elif base == "C":
+            other_side += "G"
+    return other_side
 
 
-def create_primer(DNA, temp_or_coding):
+def create_other_side_RNA(RNA):
+    RNA = create_other_side_DNA(RNA)
+    RNA.replace("T", "U")
+
+
+def translate_orf(orf):
+    codontable = create_codon_table()
+    eiwit = ""
+    for i in [ orf[i:i+3] for i in range(0, len(orf), 3)]:
+        eiwit += codontable[i]
+    return eiwit
+
+
+def create_primer(DNA, temp_or_coding="Coding", len_primer=6):
     if temp_or_coding == "Template":
         print(DNA, temp_or_coding)
+
+    elif temp_or_coding == "Coding":
+        print(DNA, temp_or_coding)
+        for base in [DNA[i] for i in range(len_primer)]:
+            print(base)
