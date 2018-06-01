@@ -1,5 +1,5 @@
 class FastaObject:
-    def __init__(self, title, sequence, length):
+    def __init__(self, title, sequence):
         self.title = title
         self.sequence = sequence
-        self.length = length
+        self.length = len(sequence)

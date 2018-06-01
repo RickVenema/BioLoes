@@ -6,6 +6,9 @@ class BioLoesSEQ:
     def __str__(self):
         return "SEQ object with sequence %s" % self.sequence
 
+    def nice_print(self):
+        print(self.sequence)
+
     def __len__(self):
         return len(self.sequence)
 
@@ -47,3 +50,4 @@ class BioLoesSEQ:
                 mRNA += "U"
             else:
                 mRNA += i
+        return mRNA

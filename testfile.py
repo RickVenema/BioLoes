@@ -4,12 +4,15 @@
 # import BioLoes.BioLoesFASTA as BioLoes
 # from BioLoes import SortingAlgortihms
 # import BioLoes.BioLoesSEQ as SeqObj
-import BioLoes.BioLoes.BioLoesFUNCTIONS as Biofuncs
+import BioLoes.BioLoesFUNCTIONS as Biofuncs
 # import BioLoes.BioLoes.BioLoesBLAST as BLAST
 
 #############
 # Test Code #
 #############
+test = Biofuncs.create_primer("ATGGGGACGTTA")
+print(test)
+
 # BLAST.BLASTn(81223361)
 
 #Biofuncs.translate("ATCTGACTATTCGATGCATGCAGCAGCAGACGCAGCATAGCGCATCGATCGA")

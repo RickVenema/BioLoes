@@ -5,8 +5,8 @@ The following files that are in this documentation  contains all the documentati
 be able to work with this library.
 
 ## Content
-[BioLoesSEQ](BioLoesSEQ.md)
-
+* [BioLoesSEQ](BioLoesSEQ.md)
+* [BioLoesFUNCTIONS](BioLoesFUNCTIONS.md)
 
 ## Extra information
 ### Bug report

@@ -1,6 +1,6 @@
 ## BioLoesSEQ
 
-### Contents
+### Content
 * [How to create a BioLoesSEQ object](#How-to-create-a-BioloesSEQ-object)
 * [Representation](#Representation)
 * [Function Documentation](#function-documentation)
@@ -8,7 +8,7 @@
   * [reverse_sequence](#reverse_sequence)
   * [upper()](#upper())
   * [lower()](#lower())
-
+  * [get_complement()](#get_complement())
 ### How to create a BioloesSEQ object
 To create a BioLoesSEQ object, the file of the module must be imported
 ```python
@@ -17,7 +17,8 @@ from BioLoes import BioLoesSEQ
 NewBioLoesObject = BioLoesSEQ(seq, ...)
 ```
 
-To create a BioLoesSEQ object the following parameters can be given to the object
+To create a BioLoesSEQ object the following parameters can be given to the object.
+
 **Required arguments**
 * seq: The sequence of the DNA
 
@@ -37,8 +38,11 @@ To print the object the str() function can be called via the str() function.
 print(str(BioLoesSEQ_object))
 ```
 
-### Function documentation
+#### nice_print()
+For a better layout of the sequence to be printed this function can be
+used.
 
+### Function documentation
 
 #### \_\_init\_\_
 This is the constructor function. When creating the BioLoesSEQ object this function is
@@ -68,4 +72,14 @@ sequence only
 ```python
 SeqLower = BioLoesSEQObject.lower()
 ``` 
+#### get_complement()
+This function is used to get the reversed complement
 
+#### get_reversed_complement()
+This function is used to get the reversed complement DNA
+
+#### GC_content()
+This function is used to get the GC value of the sequence
+
+#### translate_to_RNA
+This function can be used to translate the DNA to RNA
