@@ -10,4 +10,4 @@ This contains the following items:
 * BioLoesFUNCTIONS
 * BioLoesBLAST
 * BioLoesSEQ
-* BioLoesFASTA]
+* BioLoesFASTA
