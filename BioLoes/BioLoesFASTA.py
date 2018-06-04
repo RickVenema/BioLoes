@@ -5,6 +5,12 @@ class BioLoesFASTA:
         self.fasta_data = self.open_fasta()
         self.fasta_seq = self.process_fasta()
 
+    class FastaObject:
+        def __init__(self, title, sequence):
+            self.title = title
+            self.sequence = sequence
+            self.length = len(sequence)
+
     def open_fasta(self):
         with open(self.fasta_file) as f:
             return f.read()
@@ -15,7 +21,7 @@ class BioLoesFASTA:
         for i in splitted_fasta:
             if i:
                 tmp = i.split("\n")
-                tmper = Fasta_object.FastaObject(tmp[0], ''.join(tmp[1:len(tmp)]), len(''.join(tmp[1:len(tmp)])))
+                tmper = self.FastaObject(tmp[0], ''.join(tmp[1:len(tmp)]))
                 all_fastas.append(tmper)
         return all_fastas
 

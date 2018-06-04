@@ -10,7 +10,7 @@ import BioLoes.BioLoesFUNCTIONS as Biofuncs
 #############
 # Test Code #
 #############
-test = Biofuncs.create_primer("ATGGGGACGTTA")
+test = Biofuncs.is_palindromic("ACATGT")
 print(test)
 
 # BLAST.BLASTn(81223361)

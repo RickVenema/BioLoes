@@ -34,7 +34,7 @@ def transcript(DNA):
     DNA.replace('T', 'U')
 
 
-def create_other_side_DNA(DNA):
+def make_ds(DNA):
     other_side = ""
     for base in DNA:
         if base == "A":
@@ -48,8 +48,8 @@ def create_other_side_DNA(DNA):
     return other_side
 
 
-def create_other_side_RNA(RNA):
-    RNA = create_other_side_DNA(RNA)
+def make_dr(RNA):
+    RNA = make_ds(RNA)
     RNA = RNA.replace("T", "U")
     return RNA
 
@@ -57,20 +57,30 @@ def create_other_side_RNA(RNA):
 def translate_orf(orf):
     codontable = create_codon_table()
     eiwit = ""
-    for i in [ orf[i:i+3] for i in range(0, len(orf), 3)]:
+    for i in [orf[i:i+3] for i in range(0, len(orf), 3)]:
         eiwit += codontable[i]
     return eiwit
 
 
 def create_primer(DNA, temp_or_coding="Coding", len_primer=6):
     """
-    This function will always return the DNA in the 5' to 3'
+    This function will always return the DNA in the 5' to 3' direction
     """
     if temp_or_coding == "Template":
         tmp = DNA[0:len_primer]
-        tmp = create_other_side_DNA(tmp)
+        tmp = make_ds(tmp)
         return tmp
     elif temp_or_coding == "Coding":
         tmp = DNA[0:len_primer]
-        tmp = create_other_side_DNA(tmp)
+        tmp = make_ds(tmp)
         return tmp[::-1]
+
+
+def is_palindromic(DNA):
+    reversed_DNA = make_ds(DNA[::-1])
+    for i, nc in enumerate(DNA):
+        if nc != reversed_DNA[i]:
+            return False
+        else:
+            continue
+    return True
