@@ -71,8 +71,7 @@ def create_primer(DNA, temp_or_coding="Coding", len_primer=6):
         tmp = make_ds(tmp)
         return tmp
     elif temp_or_coding == "Coding":
-        tmp = DNA[0:len_primer]
-<<<<<<< HEAD
+
         tmp = make_ds(tmp)
         return tmp[::-1]
 
@@ -85,11 +84,5 @@ def is_palindromic(DNA):
         else:
             continue
     return True
-=======
-        tmp = create_other_side_DNA(tmp)
-        return tmp[::-1]
 
 
-def is_palindrome(DNA):
-    pass
->>>>>>> ca1ab959cdbf3054e05c30cac5bdfba7033a7d69
