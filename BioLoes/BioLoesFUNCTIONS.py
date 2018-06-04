@@ -74,3 +74,7 @@ def create_primer(DNA, temp_or_coding="Coding", len_primer=6):
         tmp = DNA[0:len_primer]
         tmp = create_other_side_DNA(tmp)
         return tmp[::-1]
+
+
+def is_palindrome(DNA):
+    pass
